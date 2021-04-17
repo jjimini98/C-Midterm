@@ -44,4 +44,19 @@
 //
 //}
 
+// p.9 포인터 연습 
+//#include <iostream>
+//using namespace std;
+//
+//int main(void) {
+//	int num = 24;
+//	int* point;
+//	point = &num;
+//
+//	cout << "num = " << num << ", &num = " << &num << endl;
+//	cout << "point = " << point << ", *point" << *point << ", size = " << sizeof(point) << endl;
+//
+//
+//}
+
 
