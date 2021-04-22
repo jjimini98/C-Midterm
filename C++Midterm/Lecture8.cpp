@@ -109,60 +109,60 @@
 //}
 
 //p.34
-#define _CRT_SECURE_NO_WRANINGS
-#include <iostream>
-#include <cstring>
-using namespace std;
-
-class Person {
-
-	char* name;
-	int id;
-
-public :
-	Person(int id, const char* name);
-	~Person();
-	
-	void changeName(const char* name); //const : 상수 메모리로 올라가면 값을 바꿀 수 없음 
-	void show() { cout << id << ',' << name << endl; }
-};
-
-Person::Person(int id, const char* name) {
-	this->id = id;
-	int len = strlen(name); //이름의 길이를 len 에 저장 
-	this->name = new char[len + 1]; //맨뒤에 \n 때문에 +1 해줘야함 
-	strcpy(this->name, name); // name 문자열을 복사 
-}
-Person::~Person() {
-	if (name)
-		delete[] name; //name 배열을 없애 버리기 
-}
-
-void Person::changeName(const char* name) {
-	if (strlen(name) > strlen(this->name))
-		return;
-	strcpy(this->name, name); 
-}
-
-
-int main(void) {
-
-	Person father(1, "Kitae");
-	Person daughter(father); 
-
-	cout << "daughter  객체 생성 직후 ------------------" << endl;
-	father.show();
-	daughter.show();
-
-
-	daughter.changeName("Grace");
-	cout << "daughter 이름을 Grace로 변경한 후 " << endl;
-	father.show();
-	daughter.show();
-
-
-
-	return 0; 
-
-
-}
+//#define _CRT_SECURE_NO_WRANINGS
+//#include <iostream>
+//#include <cstring>
+//using namespace std;
+//
+//class Person {
+//
+//	char* name;
+//	int id;
+//
+//public :
+//	Person(int id, const char* name);
+//	~Person();
+//	
+//	void changeName(const char* name); //const : 상수 메모리로 올라가면 값을 바꿀 수 없음 
+//	void show() { cout << id << ',' << name << endl; }
+//};
+//
+//Person::Person(int id, const char* name) {
+//	this->id = id;
+//	int len = strlen(name); //이름의 길이를 len 에 저장 
+//	this->name = new char[len + 1]; //맨뒤에 \n 때문에 +1 해줘야함 
+//	strcpy(this->name, name); // name 문자열을 복사 
+//}
+//Person::~Person() {
+//	if (name)
+//		delete[] name; //name 배열을 없애 버리기 
+//}
+//
+//void Person::changeName(const char* name) {
+//	if (strlen(name) > strlen(this->name))
+//		return;
+//	strcpy(this->name, name); 
+//}
+//
+//
+//int main(void) {
+//
+//	Person father(1, "Kitae");
+//	Person daughter(father); 
+//
+//	cout << "daughter  객체 생성 직후 ------------------" << endl;
+//	father.show();
+//	daughter.show();
+//
+//
+//	daughter.changeName("Grace");
+//	cout << "daughter 이름을 Grace로 변경한 후 " << endl;
+//	father.show();
+//	daughter.show();
+//
+//
+//
+//	return 0; 
+//
+//
+//}  
