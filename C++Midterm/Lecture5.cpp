@@ -134,3 +134,105 @@
 //	system("pause");
 //
 //}
+
+
+//포인터연습
+//#include <iostream>
+//using namespace std;
+//
+//int main(void) {
+
+	//int a = 1, * p = &a;
+	//cout << "p = " << p << endl << "*p = " << *p << endl << "**p = " << **p <<endl; 
+	//system("pause");
+
+	//int** a, * b, c, d; 
+	//c = 30;
+	//b = &c; 
+	//a = &b;
+	//d = **a; 
+
+	//cout << a << endl << *a << endl << **a <<endl;;
+//
+//
+//}
+
+
+// 배열 포인터 연습 
+//#include <iostream>
+//using namespace std;
+//
+//int main(void) {
+//	char data[4] = "abc";
+//	char* p1 = data; 
+//	char* p2;
+//	p2 = &data[0];
+//	char* p3 = &data[2];
+//	
+//	cout << "*p1은 " << *p1 << " *p2는 " << *p2 << endl;
+//	cout << "p1은 " << p1 << " p2는 " << p2 << endl;
+//	cout << "p3는 " << p3 << " *p3는" << p3 << endl;
+//	cout <<" &data는 " << &data << endl; 
+//	system("pause");
+//
+// 
+// 
+//
+//
+//}
+
+
+
+//#include<iostream>
+//using namespace std;
+//int main(void)
+//{
+//	//int a = 7, *b = &a, **c = &b;
+//	int a, * b, ** c;
+//	a = 7;
+//	b = &a; // a값이 저장된 주소
+//	c = &b; // a값의 주소가 저장된 주소
+//	cout << "a = " << a << ", *b = " << *b << ", **c = " << **c << endl;
+//	cout << "b = " << b << ", *c = " << *c << ", &b = " << &b << ", c = " << c << endl;
+//	cout << "*(&a) = " << *(&a) << ", *(b) = " << *(b) << ", *(&b) = " << *(&b) << endl;
+//	cout << "*(c) = " << *(c) << ", *(&c) = " << *(&c) << endl;
+//	system("pause");
+//}
+
+
+//#include <iostream> 
+//using namespace std;
+//
+//int main(void) {
+//
+//	int n[3][3] = { {1,2,3},{4,5,6},{7,8,9} };
+//	cout << n[2][1];
+//
+//
+//}
+
+
+
+#include <iostream>
+using namespace std; 
+
+int main(void) {
+
+	int i, sum = 0;
+	int num[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	
+	for (i = 0; i < 10; i++) {
+	
+		sum += *(num + i);
+		cout << &(*(num + i)) << endl;
+		cout << sum << endl; 
+
+	
+	
+	
+	
+	}
+
+
+
+}
